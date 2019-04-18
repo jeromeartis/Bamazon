@@ -108,6 +108,7 @@ console.log(`Cost: ${currentPrice}`);
 let totalPrice = orderItem * currentPrice
 console.log(`Billed Amount: ${totalPrice}`);
 console.log("********************************************************")
+
 connection.query("UPDATE bamazon.products SET stock_quantity = ? WHERE item_id = ?",
 [ updateQuantity, getItemID]
 )
@@ -118,3 +119,4 @@ catch(err){
 // let totalCost = currentPrice * showQuantity
 
 }
+connection.close();
